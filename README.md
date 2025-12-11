@@ -7,7 +7,7 @@ Retro look on memes and Gifs to look up
 4. GIPHY
 # WireFrame
 Coming soon
-#Story
+# Story
 Coming soon
-#Add-ons
+# Add-ons
 Coming Soon
