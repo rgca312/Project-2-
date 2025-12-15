@@ -1,0 +1,203 @@
+// Variables
+$primary-color: #ff6ec7;
+$secondary-color: #7b68ee;
+$bg-color: #1a1a2e;
+$card-bg: #16213e;
+$text-color: #eee;
+$shadow: 0 8px 16px rgba(255, 110, 199, 0.3);
+
+// Mixins
+@mixin retro-border {
+    border: 3px solid $primary-color;
+    box-shadow: $shadow;
+}
+
+@mixin retro-glow {
+    text-shadow: 0 0 10px $primary-color, 0 0 20px $primary-color;
+}
+
+// Reset & Base
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, $bg-color 0%, #0f3460 100%);
+    color: $text-color;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+// Container
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+// Header
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    
+    .title {
+        font-size: 3.5rem;
+        color: $primary-color;
+        @include retro-glow;
+        margin-bottom: 10px;
+        letter-spacing: 8px;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+        color: $secondary-color;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+}
+
+// Search Container
+.search-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+    
+    .search-input {
+        flex: 1;
+        padding: 15px 20px;
+        font-size: 1.1rem;
+        background: $card-bg;
+        color: $text-color;
+        @include retro-border;
+        outline: none;
+        font-family: 'Courier New', monospace;
+        
+        &::placeholder {
+            color: rgba($text-color, 0.5);
+        }
+        
+        &:focus {
+            box-shadow: 0 0 20px $primary-color;
+        }
+    }
+    
+    .search-btn {
+        padding: 15px 40px;
+        font-size: 1.1rem;
+        background: linear-gradient(135deg, $primary-color, $secondary-color);
+        color: $text-color;
+        border: none;
+        cursor: pointer;
+        font-family: 'Courier New', monospace;
+        font-weight: bold;
+        letter-spacing: 2px;
+        @include retro-border;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px rgba($primary-color, 0.5);
+        }
+        
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
+
+// Loading
+.loading {
+    text-align: center;
+    padding: 40px;
+    
+    .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid rgba($primary-color, 0.3);
+        border-top-color: $primary-color;
+        border-radius: 50%;
+        margin: 0 auto 20px;
+        animation: spin 1s linear infinite;
+    }
+    
+    p {
+        color: $secondary-color;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+    }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+// Error
+.error {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 0, 0, 0.2);
+    @include retro-border;
+    color: #ff6b6b;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+// Hidden utility
+.hidden {
+    display: none !important;
+}
+
+// Results Container
+.results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+    
+    .gif-card {
+        background: $card-bg;
+        @include retro-border;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 30px rgba($primary-color, 0.6);
+        }
+        
+        img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gif-title {
+            padding: 15px;
+            font-size: 0.9rem;
+            color: $text-color;
+            text-align: center;
+            background: rgba($primary-color, 0.1);
+            border-top: 2px solid $primary-color;
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .header .title {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+    
+    .search-container {
+        flex-direction: column;
+    }
+    
+    .results-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Giphy Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">GIPHY RETRO</h1>
+            <p class="subtitle">Find the perfect GIF</p>
+        </header>
+
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="searchInput" 
+                class="search-input" 
+                placeholder="Search for GIFs..."
+                autocomplete="off"
+            >
+            <button id="searchBtn" class="search-btn">SEARCH</button>
+        </div>
+
+        <div id="loadingIndicator" class="loading hidden">
+            <div class="loading-spinner"></div>
+            <p>Loading GIFs...</p>
+        </div>
+
+        <div id="errorMessage" class="error hidden"></div>
+
+        <div id="resultsContainer" class="results-container"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
