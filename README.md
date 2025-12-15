@@ -1,5 +1,5 @@
 # RetroGiphySearch
-Retro look on memes and Gifs to look up 
+Retro look on any meme that the user wishes to get. Thanks to GIPHY the website will have a retro neon color theme.
 # Technology
 1. HTML
 2. CSS
@@ -11,6 +11,7 @@ Retro look on memes and Gifs to look up
 
 
 # Story
-Coming soon
+1. User can search up any meme, gif or GIPHY
+2. User can download the picture
+3. User can click on any picture and it will show any related pictures
 # Add-ons
-Coming Soon
