@@ -7,8 +7,7 @@ Retro look on any meme that the user wishes to get. Thanks to GIPHY the website 
 4. GIPHY
 # WireFrame
 <img width="913" height="736" alt="image" src="https://github.com/user-attachments/assets/1e92206a-7782-42a3-9424-59bb70c63ddd" />
-<img width="1632" height="858" alt="image" src="https://github.com/user-attachments/assets/6c873213-6c67-4188-a796-cb86cb7f644c" />
-
+<img width="1693" height="863" alt="image" src="https://github.com/user-attachments/assets/d30de989-4490-4b95-b8b4-0b30410b6fb0" />
 
 # Story
 1. User can search up any meme, gif or GIPHY
