@@ -15,3 +15,5 @@ Retro look on any meme that the user wishes to get. Thanks to GIPHY the website 
 2. User can download the picture
 3. User can click on any picture and it will show any related pictures
 # Add-ons
+More memes, gifs, GIPHYS 
+Add clips 
